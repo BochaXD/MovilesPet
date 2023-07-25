@@ -6,6 +6,10 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   providedIn: 'root',
 })
 export class FireserviceService {
+  obtenerUsuariosDisponibles ()
+  {
+    throw new Error( 'Method not implemented.' );
+  }
   constructor(
     public auth: AngularFireAuth,
     public firestore: AngularFirestore
@@ -23,6 +27,4 @@ export class FireserviceService {
   getDetails(data: any) {
     return this.firestore.collection('users').doc(data.uid).valueChanges();
   }
-
-  
 }

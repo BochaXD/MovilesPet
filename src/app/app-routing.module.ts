@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'image-viewer-modal',
     loadChildren: () => import('./image-viewer-modal/image-viewer-modal.module').then( m => m.ImageViewerModalPageModule)
   },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  },
 ];
 @NgModule({
   imports: [
